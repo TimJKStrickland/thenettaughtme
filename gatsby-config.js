@@ -1,9 +1,7 @@
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-theme-blog`,
-      options: {},
-    },
+    `gatsby-theme-blog`,
+    `gatsby-theme-waves`
   ],
   // Customize your site metadata:
   siteMetadata: {
