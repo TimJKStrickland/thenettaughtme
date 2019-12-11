@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "gatsby": "^2.18.4",
+    "gatsby": "^2.18.10",
+    "gatsby-cli": "^2.8.18",
     "gatsby-theme-blog": "^1.2.4",
     "gatsby-theme-waves": "^0.1.5",
     "react": "^16.12.0",
