@@ -8,6 +8,9 @@
     "build": "gatsby build",
     "clean": "gatsby clean"
   },
+  "workspaces": [
+    "gatsby-theme-blog"
+  ],
   "dependencies": {
     "deepmerge": "^4.2.2",
     "gatsby": "^2.18.10",

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import { StaticQuery, graphql } from "gatsby"
 import { Styled } from "theme-ui"
 
 /**
@@ -7,10 +8,23 @@ import { Styled } from "theme-ui"
 
 export default () => (
   <Fragment>
-    This is where <Styled.a href="http://example.com/">your name</Styled.a>
-    {` `}
-    goes.
-    <br />
-    Or whatever, you make the rules.
+    <StaticQuery
+      query={graphql`
+        query BioContentQuery {
+          site {
+            siteMetadata {
+              author
+              description
+            }
+          }
+        }
+      `}
+      render={data => (
+        <Fragment>
+          <Styled.h4>{data.site.siteMetadata.author}</Styled.h4>
+          <Styled.h5>{data.site.siteMetadata.description}</Styled.h5>
+        </Fragment>
+      )}
+    />
   </Fragment>
 )
