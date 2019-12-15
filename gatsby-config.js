@@ -1,14 +1,14 @@
 module.exports = {
-  plugins: [`gatsby-theme-waves`, `gatsby-theme-blog`],
+  plugins: [`gatsby-theme-blog`, `gatsby-theme-waves`],
 
   siteMetadata: {
     title: `The War on Jank`,
     author: `Tim JK Strickland: webhead`,
-    description: `This is a random assortment of web-related tutorials and thoughts. There might be other unrelated posts because I'm trying to shed the social media addiction.`,
+    description: `A random assortment of thoughts, web-related and otherwise.`,
     social: [
       {
-        name: `twitter`,
-        url: `https://twitter.com/timjkstrickland`,
+        name: `dev.to`,
+        url: `https://dev.to/timjkstrickland`,
       },
       {
         name: `github`,
