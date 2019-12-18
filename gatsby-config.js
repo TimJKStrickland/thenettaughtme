@@ -1,5 +1,28 @@
 module.exports = {
-  plugins: [`gatsby-theme-blog`, `gatsby-theme-waves`],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/gatsby-theme-blog/gatsby-plugin-theme-ui/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Girassol`,
+          `Lato\:400,400i,700, 700i` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-theme-blog`
+    },
+    {
+      resolve: `gatsby-theme-waves`
+    },
+  ],
 
   siteMetadata: {
     title: `The War on Jank`,
