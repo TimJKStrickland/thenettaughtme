@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-blog-theme",
+  "name": "gatsby-mess",
   "private": true,
   "version": "0.0.1",
   "scripts": {
@@ -14,8 +14,9 @@
   "dependencies": {
     "deepmerge": "^4.2.2",
     "gatsby": "^2.18.10",
-    "gatsby-cli": "^2.8.18",
+    "gatsby-cli": "^2.8.21",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-theme-ui": "^0.2.53",
     "gatsby-plugin-typography": "^2.3.20",
     "gatsby-theme-blog": "^1.2.4",
     "gatsby-theme-waves": "^0.1.5",

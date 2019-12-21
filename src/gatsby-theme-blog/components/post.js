@@ -19,7 +19,7 @@ const Post = ({
   next,
 }) => (
   <Layout location={location}>
-    <PostHeader title={title} />
+    <PostHeader title={ title } location={ location } />
     <SEO title={post.title} description={post.excerpt} />
     <main>
       <Styled.h1>{post.title}</Styled.h1>

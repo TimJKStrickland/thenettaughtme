@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/gatsby-theme-blog/gatsby-plugin-theme-ui/typography`,
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     {
@@ -17,11 +17,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-theme-blog`
+      resolve: `gatsby-theme-blog`,
     },
     {
-      resolve: `gatsby-theme-waves`
+      resolve: `gatsby-plugin-theme-ui`,
     },
+    { resolve: `gatsby-theme-waves`, },
   ],
 
   siteMetadata: {
