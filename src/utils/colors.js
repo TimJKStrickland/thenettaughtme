@@ -10,8 +10,8 @@ const blue = `#00aacc`
 const blueGray = `#282c35`
 
 export default {
-  text: blueGray,
-  primary: darkBlue,
+  text: blue,
+  primary: blue,
   heading: blueGray,
   background: blue,
   modes: {
