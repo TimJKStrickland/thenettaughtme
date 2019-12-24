@@ -12,6 +12,7 @@
     "gatsby-theme-blog"
   ],
   "dependencies": {
+    "core-util-is": "^1.0.2",
     "deepmerge": "^4.2.2",
     "gatsby": "^2.18.10",
     "gatsby-cli": "^2.8.21",
