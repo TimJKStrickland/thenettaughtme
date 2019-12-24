@@ -8,10 +8,11 @@ export default ({ children, ...props }) => (
     <div>
       <div
         css={css({
-          maxWidth: `75vw`,
+          maxWidth: `960px`,
           mx: `auto`,
           px: 3,
-          py: 4,
+          pt: 0,
+          pb: 4,
         })}
       >
         {children}

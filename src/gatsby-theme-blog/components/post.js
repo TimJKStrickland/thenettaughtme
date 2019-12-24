@@ -2,7 +2,6 @@ import React from "react"
 import { Styled, css } from "theme-ui"
 
 import PostFooter from "../components/post-footer"
-import PostHeader from "../components/post-header"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -19,7 +18,6 @@ const Post = ({
   next,
 }) => (
   <Layout location={location}>
-    <PostHeader title={ title } location={ location } />
     <SEO title={post.title} description={post.excerpt} />
     <main>
       <Styled.h1>{post.title}</Styled.h1>

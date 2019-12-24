@@ -5,6 +5,9 @@ import styles from "../utils/styles"
 export default {
   ...baseTheme,
   ...wavesTheme,
-  colors,
-  styles
+  styles,
+  colors: {
+    ...colors,
+    initialColorModeName: `dark`
+  }
 }
