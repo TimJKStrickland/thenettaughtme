@@ -1,4 +1,4 @@
-import waves from "gatsby-theme-waves/src/gatsby-plugin-theme-ui/waves"
+import waves from "../gatsby-theme-waves/gatsby-plugin-theme-ui/waves"
 
 export default {
   waves,
@@ -7,6 +7,7 @@ export default {
   },
   h4: {
     fontFamily: 'body',
+    fontWeight: 700
   },
   h5: {
     fontFamily: 'body',

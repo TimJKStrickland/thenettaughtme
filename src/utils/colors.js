@@ -1,11 +1,11 @@
-const darkBlue = '#006aad'
+const darkBlue = '#062b50'
 const lightBlue = '#66E0FF'
 const purple60 = '#663399'
 const purple30 = '#D9BAE8'
 const grey90 = '#232129'
 const white = '#fff'
 const lightWhite = 'rgba(255, 255, 255, 0.86)'
-const opaqueLightWhite = 'hsla(0, 0%, 100%, 0.2)'
+const opaqueLightWhite = 'rgba(255,255,255, 0.2)'
 
 
 export default {

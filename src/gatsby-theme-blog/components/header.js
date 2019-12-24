@@ -6,7 +6,6 @@ import Bio from "./bio"
 const rootPath = `${__PATH_PREFIX__}/`
 
 const Title = ({ children, location }) => {
-  console.log("TCL: Title -> location", location)
   console.log("TCL: Title -> children", children)
   if (location.pathname === rootPath) {
     return (
@@ -34,17 +33,17 @@ const Title = ({ children, location }) => {
       <Styled.h3
         css={css({
           my: 0,
+          mr: `auto`
         })}
       >
         <Styled.a
           as={Link}
           css={css({
-            boxShadow: `none`,
             textDecoration: `none`,
           })}
-          to={location.pathname}
+          to={`/`}
         >
-          {location.pathname}
+          {children}
         </Styled.a>
       </Styled.h3>
     )
@@ -54,22 +53,23 @@ const Title = ({ children, location }) => {
 export default ({ children, title, ...props }) => {
 
   return (
-    <header>
+    <header css={css({
+      maxWidth:`960px`,
+      mx: `auto`
+    })}>
       <div
         css={css({
-          maxWidth: `500px`,
-          ml: `auto`,
-          mr: `0`,
+          maxWidth: `960px`,
+          ml: 0,
           px: 3,
-          pt: 4,
+          pt: 3,
         })}
       >
         <div
           css={css({
             display: `flex`,
             justifyContent: `space-between`,
-            alignItems: `center`,
-            mb: 4,
+            mb: 3,
           })}
         >
           <Title {...props}>{title}</Title>
