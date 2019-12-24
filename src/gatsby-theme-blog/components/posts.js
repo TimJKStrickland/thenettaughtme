@@ -16,11 +16,7 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
           <Fragment key={node.slug}>
             <SEO title="Home" keywords={keywords} />
             <div>
-              <Styled.h2
-                css={css({
-                  mb: 1,
-                })}
-              >
+              <Styled.h2 css={css({my:0})}>
                 <Styled.a
                   as={Link}
                   css={css({
@@ -31,8 +27,22 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
                   {title}
                 </Styled.a>
               </Styled.h2>
-              <small>{node.date}</small>
-              <Styled.p>{node.excerpt}</Styled.p>
+              <small
+                css={css({
+                  fontWeight: "700",
+                  fontSize: "14px",
+                })}
+              >
+                {node.date}
+              </small>
+              <Styled.p
+                css={css({
+                  mt: 2,
+                  mb:4
+                })}
+              >
+                {node.excerpt}
+              </Styled.p>
             </div>
           </Fragment>
         )

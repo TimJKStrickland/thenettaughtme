@@ -34,7 +34,7 @@ export default {
   modes: {
     dark: {
       text: lightBlue,
-      background: grey90,
+      background: darkBlue,
       primary: purple30,
       secondary: lightWhite,
       muted: opaqueLightWhite,
