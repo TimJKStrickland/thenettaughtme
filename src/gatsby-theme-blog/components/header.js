@@ -6,7 +6,6 @@ import Bio from "./bio"
 const rootPath = `${__PATH_PREFIX__}/`
 
 const Title = ({ children, location }) => {
-  console.log("TCL: Title -> children", children)
   if (location.pathname === rootPath) {
     return (
       <Styled.h1
