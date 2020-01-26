@@ -31,7 +31,7 @@ module.exports = {
     description: `A random assortment of thoughts, web-related and otherwise.`,
     social: [
       {
-        name: `dev.to`,
+        name: `dev`,
         url: `https://dev.to/timjkstrickland`,
       },
       {

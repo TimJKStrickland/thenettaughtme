@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/home-footer"
 
+
 const Posts = ({ location, posts, siteTitle, socialLinks }) => (
   <Layout location={location} title={siteTitle}>
     <main>
