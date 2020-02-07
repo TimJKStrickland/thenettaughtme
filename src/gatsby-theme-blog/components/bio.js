@@ -17,35 +17,10 @@ const Bio = () => {
     site: {
       siteMetadata: { author },
     },
-    avatar,
   } = data
 
   return (
-    <Flex css={css({ mb: 4, alignItems: `center` })}>
-      {avatar ? (
-        <Image
-          fixed={avatar.childImageSharp.fixed}
-          alt={author}
-          css={css({
-            mr: 2,
-            mb: 0,
-            width: 48,
-            minWidth: 48,
-            borderRadius: 99999,
-          })}
-        />
-      ) : (
-        <div
-          css={css({
-            mr: 2,
-            mb: 0,
-            width: 48,
-            minWidth: 48,
-            borderRadius: 99999,
-          })}
-          role="presentation"
-        />
-      )}
+    <Flex css={css({ mb: 0, alignItems: `center` })}>
       <Styled.div>
         <BioContent />
       </Styled.div>
