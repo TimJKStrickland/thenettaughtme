@@ -18,6 +18,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-theme-blog`,
+      options: {
+        
+      }
     },
     {
       resolve: `gatsby-plugin-theme-ui`,
