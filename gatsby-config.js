@@ -19,13 +19,15 @@ module.exports = {
     {
       resolve: `gatsby-theme-blog`,
       options: {
-        
+        basePath: '/posts'
       }
     },
     {
       resolve: `gatsby-plugin-theme-ui`,
     },
-    { resolve: `gatsby-theme-waves`, },
+    { resolve: `gatsby-theme-waves`,
+      options: {}
+    },
   ],
 
   siteMetadata: {

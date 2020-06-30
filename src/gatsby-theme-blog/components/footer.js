@@ -4,9 +4,23 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { faGithub, faDev, faCodepen } from "@fortawesome/free-brands-svg-icons"
+import { useStaticQuery, graphql } from "gatsby"
 
+const Footer = () => {
 
-const Footer = ({ socialLinks }) => {
+  const data = useStaticQuery(graphql`
+  query footerQuery {
+    site {
+      siteMetadata {
+        social {
+          name
+          url
+        }
+      }
+    }
+  }`);
+  
+  console.log('data', data)
   library.add(fab, faGithub, faDev, faCodepen)
   return (
     <Fragment>
@@ -23,7 +37,7 @@ const Footer = ({ socialLinks }) => {
           </Styled.h6>
         </Box>
         <Box sx={{ width: [`1/2`, `1/1`] }}>
-          {socialLinks.map((platform, i, arr) => (
+          {data.site.siteMetadata.social.map((platform, i, arr) => (
             <Fragment key={platform.url}>
               <Styled.a
                 href={platform.url}

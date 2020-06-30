@@ -1,24 +1,25 @@
 import React from "react"
 import { css, Styled } from "theme-ui"
 import Header from "./header"
+import Footer from './footer'
 
 export default ({ children, ...props }) => {
   return(
-    <Styled.root>
+    <Styled.root
+      css={css({
+        maxWidth: `960px`,
+        mx: `auto`,
+        px: 3,
+        pt: 0,
+        pb: 4,
+      })}>
       <Header {...props} />
       <div>
-        <div
-          css={css({
-            maxWidth: `960px`,
-            mx: `auto`,
-            px: 3,
-            pt: 0,
-            pb: 4,
-          })}
-        >
+        <div>
           {children}
         </div>
       </div>
+      <Footer />
     </Styled.root>
   )
 }

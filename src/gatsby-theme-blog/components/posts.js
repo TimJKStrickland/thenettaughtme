@@ -2,15 +2,14 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 import { Styled, css } from "theme-ui"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Footer from "../components/home-footer"
+import Layout from "./layout"
+import SEO from "./seo"
 
 
-const Posts = ({ location, posts, siteTitle, socialLinks }) => (
+const Posts = ({ location, posts, siteTitle }) => (
   <Layout location={location} title={siteTitle}>
     <main>
-      {posts.map(({ node }) => {
+      { posts.map(({ node }) => {
         const title = node.title || node.slug
         const keywords = node.keywords || []
         return (
@@ -49,7 +48,6 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
         )
       })}
     </main>
-    <Footer socialLinks={socialLinks} />
   </Layout>
 )
 

@@ -7,7 +7,6 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import { Styled, css, Flex } from "theme-ui"
 import BioContent from "./bio-content"
 
@@ -22,7 +21,7 @@ const Bio = () => {
   return (
     <Flex css={css({ mb: 0, alignItems: `center` })}>
       <Styled.div>
-        <BioContent />
+        <BioContent author={ author } />
       </Styled.div>
     </Flex>
   )
