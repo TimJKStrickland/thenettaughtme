@@ -28,27 +28,33 @@ export default ({ children, title, ...props }) => {
     })}>
       <Flex
         css={ css({
-          alignItems: 'flex-end',
-          justifyContent: 'flex-end',
+          alignItems: 'center',
+          justifyContent: 'justify-center',
           paddingTop: `1rem`,
           paddingBottom: `1rem`,
           }) }>
-        <Styled.a 
-          href={ `/posts` }
+        <Styled.a
+        href={ `/` }
           css={ css({
-            paddingLeft: `0.5rem`,
-            paddingRight: `0.5rem`,
-            color: `currentColor`,
+            color: `secondary`,
+            textDecoration: `none`,
           })}
-        >Writings</Styled.a>
+        >TIMJK</Styled.a>
         <Styled.a
           href={ `/projects` }
             css={ css({
-              paddingLeft: `0.5rem`,
-              paddingRight: `0.5rem`,
-              color: `currentColor`,
+              paddingLeft: `1rem`,
+              marginLeft: `auto`,
+              color: `secondary`,
             })}
           >Projects</Styled.a>
+        <Styled.a 
+          href={ `/posts` }
+          css={ css({
+            paddingLeft: `1rem`,
+            color: `secondary`,
+          })}
+        >Writings</Styled.a>
         {data.site.siteMetadata.social.map((platform, i, arr) => (
           <Box
             key={platform.url}>
@@ -56,13 +62,14 @@ export default ({ children, title, ...props }) => {
               href={platform.url}
               target="_blank"
               rel="noopener noreferrer"
+              css={css({
+                boxSizing: `border-box`,
+                paddingLeft: `1rem`,
+              })}
             >
               <FontAwesomeIcon
                 icon={["fab", `${platform.name}`]}
-                css={css({
-                  ml: 1,
-                  fontSize: 4,
-                })}
+                css={css({ fontSize: 4 })}
               />
             </Styled.a>
           </Box>

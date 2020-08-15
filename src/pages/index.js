@@ -8,16 +8,30 @@ const Index = ({ location, siteTitle }) => (
     <main>
       <Box
         p={4}
-        css={ css({ height:`100vh`, })
+        css={ css({
+          alignItems: `center`,
+          display: `grid`,
+          height:`100vh`,
+          justifyContent: `center`,
+        })
       }>
-        <h1>Computer. HELLO.</h1>
+        <div>
+          <h1>Computer. HELLO.</h1>
+        </div>
       </Box>
       <Box
         p={4}
-        css={ css({ height:`100vh`, })
+        css={ css({
+          alignItems: `center`,
+          display: `grid`,
+          height:`100vh`,
+          justifyContent: `center`,
+        })
       }>
-        <h1>Projects</h1>
-        <h2>React-Rails Free Code Camp</h2>
+        <div>
+          <h1>Projects</h1>
+          <h2>React-Rails Free Code Camp</h2>
+        </div>
       </Box>
     </main>
   </Layout>
