@@ -3,14 +3,14 @@ import { Box, css } from "theme-ui"
 
 import Layout from "../gatsby-theme-blog/components/layout"
 
-const Index = ({ location, siteTitle }) => (
+const Projects = ({ location, siteTitle }) => (
   <Layout location={location} title={siteTitle}>
     <main>
       <Box
         p={4}
         css={ css({ height:`100vh`, })
       }>
-        <h1>Computer. HELLO.</h1>
+        <h1>Projects</h1>
       </Box>
       <Box
         p={4}
@@ -22,4 +22,4 @@ const Index = ({ location, siteTitle }) => (
     </main>
   </Layout>
 )
-export default Index;
+export default Projects;

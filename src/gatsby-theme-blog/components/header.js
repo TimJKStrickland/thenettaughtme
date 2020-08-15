@@ -1,81 +1,73 @@
 import React from "react"
-import { Link } from "gatsby"
-import { css, Styled } from "theme-ui"
-import Bio from "./bio"
-
-const rootPath = `${__PATH_PREFIX__}/`
-
-const Title = ({ children, location }) => {
-  if (location.pathname === rootPath) {
-    return (
-      <Styled.h1
-        css={css({
-          my: 0,
-          fontSize: 4,
-        })}
-      >
-        <Styled.a
-          as={Link}
-          css={css({
-            color: `inherit`,
-            boxShadow: `none`,
-            textDecoration: `none`,
-          })}
-          to={`/`}
-        >
-          {children}
-        </Styled.a>
-      </Styled.h1>
-    )
-  } else {
-    return (
-      <Styled.h3
-        css={css({
-          my: 0,
-          mr: `auto`
-        })}
-      >
-        <Styled.a
-          as={Link}
-          css={css({
-            textDecoration: `none`,
-          })}
-          to={`/`}
-        >
-          {children}
-        </Styled.a>
-      </Styled.h3>
-    )
-  }
-}
+import { css, Styled, Box, Flex } from "theme-ui"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faDev, faCodepen } from "@fortawesome/free-brands-svg-icons"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default ({ children, title, ...props }) => {
+  const data = useStaticQuery(graphql`
+  query socialQuery {
+    site {
+      siteMetadata {
+        social {
+          name
+          url
+        }
+      }
+    }
+  }`);
+
+  library.add(fab, faGithub, faDev, faCodepen)
 
   return (
     <header css={css({
       maxWidth:`960px`,
       mx: `auto`
     })}>
-      <div
-        css={css({
-          maxWidth: `960px`,
-          ml: 0,
-          px: 3,
-          pt: 3,
-        })}
-      >
-        <div
-          css={css({
-            display: `flex`,
-            justifyContent: `space-between`,
-            mb: 3,
+      <Flex
+        css={ css({
+          alignItems: 'flex-end',
+          justifyContent: 'flex-end',
+          paddingTop: `1rem`,
+          paddingBottom: `1rem`,
+          }) }>
+        <Styled.a 
+          href={ `/posts` }
+          css={ css({
+            paddingLeft: `0.5rem`,
+            paddingRight: `0.5rem`,
+            color: `currentColor`,
           })}
-        >
-          <Title {...props}>{title}</Title>
-          {children}
-        </div>
-        {props.location.pathname === rootPath && <Bio />}
-      </div>
+        >Writings</Styled.a>
+        <Styled.a
+          href={ `/projects` }
+            css={ css({
+              paddingLeft: `0.5rem`,
+              paddingRight: `0.5rem`,
+              color: `currentColor`,
+            })}
+          >Projects</Styled.a>
+        {data.site.siteMetadata.social.map((platform, i, arr) => (
+          <Box
+            key={platform.url}>
+            <Styled.a
+              href={platform.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={["fab", `${platform.name}`]}
+                css={css({
+                  ml: 1,
+                  fontSize: 4,
+                })}
+              />
+            </Styled.a>
+          </Box>
+        ))}
+      </Flex>
     </header>
   )
 }

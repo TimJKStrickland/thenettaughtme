@@ -13,4 +13,9 @@ export default {
     fontFamily: 'body',
     fontWeight: 400
   },
+  links: {
+    fontFamily: 'body',
+    color: 'secondary',
+    textDecoration: 'none',
+  }
 }
