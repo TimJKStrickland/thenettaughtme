@@ -13,13 +13,13 @@ export default ({ children, ...props }) => {
         pt: 0,
         pb: 4,
       })}>
-      <Header {...props} />
+      <Header />
       <div>
         <div>
           {children}
         </div>
       </div>
-      <Footer />
+      <Footer {...props} />
     </Styled.root>
   )
 }

@@ -7,7 +7,7 @@
     "local": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby-plugin-s3 deploy",
+    "deploy": "gatsby clean && gatsby build && gatsby-plugin-s3 deploy",
     "clean": "gatsby clean"
   },
   "workspaces": [
