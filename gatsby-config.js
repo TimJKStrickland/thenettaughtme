@@ -28,12 +28,18 @@ module.exports = {
     { resolve: `gatsby-theme-waves`,
       options: {}
     },
+    { 
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "thenettaught.me",
+      },
+    }
   ],
 
   siteMetadata: {
-    title: `The War on Jank`,
+    title: `TheNetTaught.Me`,
     author: `Tim JK Strickland: webhead`,
-    description: `A random assortment of thoughts, web-related and otherwise.`,
+    description: `Learn from my mistakes, learn from my successes`,
     social: [
       {
         name: `dev`,

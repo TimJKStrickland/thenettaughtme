@@ -16,21 +16,8 @@ const Index = ({ location, siteTitle }) => (
         })
       }>
         <div>
-          <h1>Computer. HELLO.</h1>
-        </div>
-      </Box>
-      <Box
-        p={4}
-        css={ css({
-          alignItems: `center`,
-          display: `grid`,
-          height:`100vh`,
-          justifyContent: `center`,
-        })
-      }>
-        <div>
-          <h1>Projects</h1>
-          <h2>React-Rails Free Code Camp</h2>
+          <h1>TheNetTaught.me</h1>
+          <h2>and it can teach you too</h2>
         </div>
       </Box>
     </main>
