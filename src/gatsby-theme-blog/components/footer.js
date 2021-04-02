@@ -60,7 +60,7 @@ export default ({ children, title, ...props }) => {
           ))}
         </Box>
           <Styled.h6 css={css({ mb: `0` })}>
-            © {new Date().getFullYear()}, Gatsby powered
+            © {new Date().getFullYear()} TNTM
           </Styled.h6>
         </Box>
       </Flex>

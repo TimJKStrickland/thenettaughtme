@@ -9,6 +9,6 @@ export default {
   styles,
   colors: {
     ...colors,
-    initialColorModeName: `dark`
+  //   initialColorModeName: `dark`
   }
 }

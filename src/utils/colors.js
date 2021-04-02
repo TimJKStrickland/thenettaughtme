@@ -10,7 +10,7 @@ const opaqueLightWhite = 'rgba(255,255,255, 0.2)'
 export default {
   text: white,
   background: darkBlue,
-  primary: darkBlue,
+  primary: lightBlue,
   secondary: lightBlue,
   muted: darkBlue,
   highlight: lightBlue,
