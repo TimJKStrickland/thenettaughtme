@@ -1,0 +1,70 @@
+---
+title: Thursday, Aug 01 2024
+date: 2024-08-01
+slug: aug-01
+excerpt: Something is better than nothing
+tags: ['daily']
+---
+
+import { CodeWave } from "gatsby-theme-waves"
+
+---
+
+## I learn as soon as I need to
+
+Like clockwork, I'm starting my journey into something new with GraphQL because I absolutely have to. GraphQL has been around for the last couple of years, and what's interesting to me is that GraphQL is _NOT_ a replacement for REST APIs. I was so scared to get started with it that it's taking me this long to even talk about it.
+
+What I've learned so far is really really cool.
+
+## Communication pattern
+
+GraphQL is a communication pattern moreso than a language. It's almost like a more human-readable RegEx in its pattern making.
+
+<CodeWave>
+
+  ```graphql
+  query MyQuery($var: String) {
+    examplePost {
+      edges {
+        node {
+          id
+          title
+          body
+        }
+      }
+    }
+  }
+  ```
+
+  So if we look at the structure here, it's pretty straightforward that we can call our query in multiple places, like it's a function or a method.
+
+  ```graphql
+  query MyQuery($var: String) {
+  ```
+We call graphql to open up a query or mutation, dependent on what our goal is, and we call it explicity
+
+```graphql
+exampleBlogPosts {
+  edges {
+   
+```
+
+Edges are the endpoints for the different groups of info we're trying to find. For this blog post, we're at all example Blog Posts. This can be defined within the app itself (Gatsby has an entire page when you're developing).
+
+```graphql
+  edges {
+    node {
+      id
+      title
+      body
+    }
+  }
+}
+```
+Nodes are the datapoints for the information we're looking for. This is how we find the values in our data. The cool part about these is that we can also limit what we see here.
+
+</CodeWave>
+
+### It's tough valuable work
+
+I'm just scratching the surface here, but there are many use cases to be found here.
